@@ -32,6 +32,9 @@ int to_int(string text) {
 
 bool is_numeric(string text) {
 	for(char ch : text) {
+		if (ch == text[0] && ch == '-') {
+			continue;
+		}
 		if (!is_numeric(ch)) {
 			return false;
 		}
@@ -97,6 +100,6 @@ bool contains(vector<T>& arr, T& target) {
 	}
 	return 0;
 }
-}
 
+}
 #endif
